@@ -68,4 +68,25 @@ Welcome to the evolving matrix of generative AI applications and tools. This dat
 > | **IBM Watson Code Assistant** | Enterprise Hybrid Cloud Engine | Targeted enterprise code mapping and cloud infrastructure refactoring. | Tailored to corporate hybrid environments, not optimized for hobby scripts. |
 > | **Polycoder** | Open-Source Language Model | Highly accurate automated generation specifically optimized for C environments. | Smaller ecosystem footprint than mainstream cloud models. |
 > | **Amazon CodeWhisperer** | AWS Ecosystem Optimization | Real-time programming recommendations natively focused on cloud tasks. | Heavily coupled with AWS cloud architectures. |
+### 📈 Generative AI Innovation & Tool Evolution Timeline
+
+Below is the structured trajectory mapping the explosion of AI capabilities from foundational layers to future predictive systems.
+
+```mermaid
+gantt
+    title Generative AI Evolution Matrix (2021 - Future Projections)
+    dateFormat  YYYY
+    axisFormat %Y
+
+    section Text Generation
+    Foundational LLMs (GPT-3, PaLM) :active, 2021, 2023
+    Advanced Multimodal Context (GPT-4o, Gemini) :crit, 2024, 2026
+    Autonomous Agent Reasoning Ecosystems : 2026, 2028
+
+    section Media & Logic
+    Diffusion Modeling Foundations (DALL-E, Midjourney) :active, 2022, 2024
+    Kinematic Video & Real-time Synthesis (Runway, Firefly) : 2024, 2026
+    Enterprise Code Generation (Copilot, Watson) :crit, 2023, 2027
+```
+
 > | **Tab9 / Repl.it** | Contextual Deep Learning | Smart code completions and collaborative interactive development environments. | Requires a human-in-the-loop review to prevent logical anti-patterns. |
