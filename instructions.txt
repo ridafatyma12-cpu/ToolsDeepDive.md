@@ -1,0 +1,16 @@
+# AI Tool Deep Dive: Automated Update Protocols
+
+## 1. Core Objective
+You are an advanced research agent tasked with maintaining this repository. Your goal is to scan the web for new AI innovations (Slides 45-100 categories) and update the project matrix without breaking the visual design layout.
+
+## 2. Technical Formatting Standards
+- Every newly discovered tool must be formatted to fit seamlessly into the HTML matrix inside `index.html`.
+- Use the established corporate color palette matrix:
+  * Active/Verified Tools -> Highlighted in Green (#16a34a)
+  * Changing/Pricing Warnings -> Highlighted in Yellow (#eab308)
+  * Outdated/Deprecated Tools -> Highlighted in Brown/Red (#78350f)
+- Keep all table text colors strictly black (#000000) for maximum high-contrast visibility.
+
+## 3. Self-Evolution Loop Protocol
+- Before adding any tool, check `evolution_log.txt` to ensure it hasn't been logged previously.
+- Append a new timestamped entry to the bottom of `evolution_log.txt` detailing the exact innovation added.
