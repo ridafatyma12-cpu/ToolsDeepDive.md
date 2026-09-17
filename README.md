@@ -73,18 +73,31 @@ Welcome to the evolving matrix of generative AI applications and tools. This dat
 
 
 ```mermaid
-gantt
-    title Generative AI Evolution Matrix (2021 - Future Projections)
-    dateFormat  YYYY
-    axisFormat %Y
+graph TD
+    %% Define Theme Colors for GitHub %%
+    classDef blue font-weight:bold,fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff;
+    classDef green font-weight:bold,fill:#16a34a,stroke:#4ade80,stroke-width:2px,color:#fff;
+    classDef brown font-weight:bold,fill:#78350f,stroke:#b45309,stroke-width:2px,color:#fff;
+    classDef yellow font-weight:bold,fill:#eab308,stroke:#facc15,stroke-width:2px,color:#000;
 
-    section Text Generation
-    Foundational LLMs (GPT-3, PaLM) :active, 2021, 2023
-    Advanced Multimodal Context (GPT-4o, Gemini) :crit, 2024, 2026
-    Autonomous Agent Reasoning Ecosystems : 2026, 2028
+    A[🚀 Foundational Data Base] --> B(🟦 Text Generation Models)
+    A --> C(🟩 Image Generation Models)
+    A --> D(🟫 Audio & Video Models)
+    A --> E(🟨 Code Generation Models)
 
-    section Media & Logic
-    Diffusion Modeling Foundations (DALL-E, Midjourney) :active, 2022, 2024
-    Kinematic Video & Real-time Synthesis (Runway, Firefly) : 2024, 2026
-    Enterprise Code Generation (Copilot, Watson) :crit, 2023, 2027
+    B --> B1[OpenAI GPT-4o]
+    B --> B2[Google Gemini]
+    
+    C --> C1[DALL-E & Midjourney]
+    
+    D --> D1[Runway & Synthesia]
+    
+    E --> E1[GitHub Copilot & Watson]
+
+    %% Apply Colors %%
+    class B,B1,B2 blue;
+    class C,C1 green;
+    class D,D1 brown;
+    class E,E1 yellow;
 ```
+
