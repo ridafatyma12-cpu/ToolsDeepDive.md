@@ -74,9 +74,9 @@
         <table>
             <thead><tr><th>Tool Name</th><th>Core Computational Capability</th><th>Pricing Model</th></tr></thead>
             <tbody>
-                <tr style="background-color: rgba(180,83,9,0.2)"><td><b>LOVO / Murf.ai</b></td><td>High-quality Text-to-Speech voice synthesis with emotional control.</td><td>Freemium</td></tr>
-                <tr style="background-color: rgba(180,83,9,0.2)"><td><b>Runway Gen-2</b></td><td>Kinematic video generation from prompts and video style transformation.</td><td>Freemium</td></tr>
-                <tr style="background-color: rgba(180,83,9,0.2)"><td><b>Synthesia</b></td><td>AI human avatars speaking realistically from plain text scripts.</td><td>Paid Tier</td></tr>
+                <tr style="background-color: rgba(120,53,15,0.2)"><td><b>LOVO / Murf.ai</b></td><td>High-quality Text-to-Speech voice synthesis with emotional control.</td><td>Freemium</td></tr>
+                <tr style="background-color: rgba(120,53,15,0.2)"><td><b>Runway Gen-2</b></td><td>Kinematic video generation from prompts and video style transformation.</td><td>Freemium</td></tr>
+                <tr style="background-color: rgba(120,53,15,0.2)"><td><b>Synthesia</b></td><td>AI human avatars speaking realistically from plain text scripts.</td><td>Paid Tier</td></tr>
             </tbody>
         </table>
     </div>
@@ -100,14 +100,10 @@
 
 <script>
     function switchTab(panelId) {
-        // Hide all content panels
         document.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
-        // Remove active class from all buttons
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         
-        // Show selected panel
         document.getElementById(panelId).classList.add('active');
-        // Make clicked button look active
         document.getElementById('btn-' + panelId).classList.add('active');
     }
 
@@ -119,7 +115,7 @@
                 labels: ['2022 Foundations', '2024 Expansion', '2026 Multimodal (Now)', '2028 Projections'],
                 datasets: [{
                     label: 'AI Tool Adoption & Efficiency Rate (%)',
-                    data:,
+                    data: [35, 60, 85, 98],
                     borderColor: '#3b82f6',
                     backgroundColor: 'rgba(59, 130, 246, 0.1)',
                     fill: true,
