@@ -21,14 +21,14 @@
         .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         header { background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue)); color: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
         .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
-        .tab-btn { padding: 10px 20px; border: none; background: #e5e7eb; cursor: pointer; border-radius: 6px; font-weight: bold; transition: 0.3s; }
+        .tab-btn { padding: 10px 20px; border: none; background: #e5e7eb; cursor: pointer; border-radius: 6px; font-weight: bold; transition: 0.3s; color: var(--text-dark); }
         .tab-btn.active { background: var(--primary-blue); color: white; }
         .content-panel { display: none; }
         .content-panel.active { display: block; }
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th { background: #e5e7eb; padding: 12px; text-align: left; border: 1px solid var(--border-color); }
-        td { padding: 12px; border: 1px solid var(--border-color); color: var(--text-dark); }
-        .chart-box { background: var(--bg-light); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 20px; height: 300px; }
+        th { background: #e5e7eb; padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: bold; }
+        td { padding: 12px; border: 1px solid var(--border-color); color: var(--text-dark); font-weight: 500; }
+        .chart-box { background: var(--bg-light); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 20px; height: 350px; }
     </style>
 </head>
 <body>
@@ -39,20 +39,20 @@
     </header>
 
     <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('text')">🟦 Text Tools</button>
-        <button class="tab-btn" onclick="switchTab('image')">🟩 Image Tools</button>
-        <button class="tab-btn" onclick="switchTab('audio')">🟫 Audio/Video</button>
-        <button class="tab-btn" onclick="switchTab('code')">🟨 Code Tools</button>
+        <button id="btn-text" class="tab-btn active" onclick="switchTab('text')">🟦 Text Tools</button>
+        <button id="btn-image" class="tab-btn" onclick="switchTab('image')">🟩 Image Tools</button>
+        <button id="btn-audio" class="tab-btn" onclick="switchTab('audio')">🟫 Audio/Video</button>
+        <button id="btn-code" class="tab-btn" onclick="switchTab('code')">🟨 Code Tools</button>
     </div>
 
     <!-- TEXT PANEL -->
     <div id="text" class="content-panel active">
         <table>
-            <thead><tr><th>Tool</th><th>Capability</th><th>Pricing</th></tr></thead>
+            <thead><tr><th>Tool Name</th><th>Core Computational Capability</th><th>Pricing Model</th></tr></thead>
             <tbody>
-                <tr style="background-color: rgba(22,163,74,0.2)"><td><b>ChatGPT</b></td><td>Dynamic conversations, writing, translations</td><td>Freemium</td></tr>
-                <tr style="background-color: rgba(22,163,74,0.2)"><td><b>Gemini</b></td><td>Real-time web research, multi-drafts</td><td>Freemium</td></tr>
-                <tr style="background-color: rgba(22,163,74,0.2)"><td><b>GPT4All</b></td><td>Privacy-focused, runs completely local</td><td>Free</td></tr>
+                <tr style="background-color: rgba(74,222,128,0.2)"><td><b>ChatGPT</b></td><td>Dynamic conversations, writing, translations, step-by-step logic.</td><td>Freemium ($20/mo available)</td></tr>
+                <tr style="background-color: rgba(74,222,128,0.2)"><td><b>Google Gemini</b></td><td>Real-time web research, multi-draft variations, strategic ideation.</td><td>Freemium ($20/mo available)</td></tr>
+                <tr style="background-color: rgba(74,222,128,0.2)"><td><b>GPT4All / PrivateGPT</b></td><td>Privacy-focused localized computation, runs completely offline.</td><td>Free / Open-Source</td></tr>
             </tbody>
         </table>
     </div>
@@ -60,11 +60,11 @@
     <!-- IMAGE PANEL -->
     <div id="image" class="content-panel">
         <table>
-            <thead><tr><th>Tool</th><th>Capability</th><th>Pricing</th></tr></thead>
+            <thead><tr><th>Tool Name</th><th>Core Computational Capability</th><th>Pricing Model</th></tr></thead>
             <tbody>
-                <tr style="background-color: rgba(22,163,74,0.2)"><td><b>DALL-E</b></td><td>High-res images, inpainting, outpainting</td><td>Paid Tier</td></tr>
-                <tr style="background-color: rgba(234,179,8,0.2)"><td><b>Midjourney v6</b></td><td>Highly artistic & stylized generations</td><td>Paid Only</td></tr>
-                <tr style="background-color: rgba(22,163,74,0.2)"><td><b>Adobe Firefly</b></td><td>Generative Fill, copyright-safe training</td><td>Freemium</td></tr>
+                <tr style="background-color: rgba(74,222,128,0.2)"><td><b>DALL-E</b></td><td>High-res image generation, seamless inpainting and outpainting.</td><td>Paid Tier (ChatGPT Plus)</td></tr>
+                <tr style="background-color: rgba(250,204,21,0.2)"><td><b>Midjourney v6</b></td><td>Highly artistic, stylized imagery and premium asset generation.</td><td>Paid Only (No free tier)</td></tr>
+                <tr style="background-color: rgba(74,222,128,0.2)"><td><b>Adobe Firefly</b></td><td>Generative Fill, vector recoloring, copyright-safe stock training.</td><td>Freemium</td></tr>
             </tbody>
         </table>
     </div>
@@ -72,11 +72,11 @@
     <!-- AUDIO/VIDEO PANEL -->
     <div id="audio" class="content-panel">
         <table>
-            <thead><tr><th>Tool</th><th>Capability</th><th>Pricing</th></tr></thead>
+            <thead><tr><th>Tool Name</th><th>Core Computational Capability</th><th>Pricing Model</th></tr></thead>
             <tbody>
-                <tr style="background-color: rgba(120,53,15,0.2)"><td><b>LOVO / Murf.ai</b></td><td>High-quality Text-to-Speech voice synthesis</td><td>Freemium</td></tr>
-                <tr style="background-color: rgba(120,53,15,0.2)"><td><b>Runway Gen-2</b></td><td>Text-to-video & video transformation</td><td>Freemium</td></tr>
-                <tr style="background-color: rgba(120,53,15,0.2)"><td><b>Synthesia</b></td><td>AI human avatars speaking from text scripts</td><td>Paid Tier</td></tr>
+                <tr style="background-color: rgba(180,83,9,0.2)"><td><b>LOVO / Murf.ai</b></td><td>High-quality Text-to-Speech voice synthesis with emotional control.</td><td>Freemium</td></tr>
+                <tr style="background-color: rgba(180,83,9,0.2)"><td><b>Runway Gen-2</b></td><td>Kinematic video generation from prompts and video style transformation.</td><td>Freemium</td></tr>
+                <tr style="background-color: rgba(180,83,9,0.2)"><td><b>Synthesia</b></td><td>AI human avatars speaking realistically from plain text scripts.</td><td>Paid Tier</td></tr>
             </tbody>
         </table>
     </div>
@@ -84,10 +84,10 @@
     <!-- CODE PANEL -->
     <div id="code" class="content-panel">
         <table>
-            <thead><tr><th>Tool</th><th>Capability</th><th>Pricing</th></tr></thead>
+            <thead><tr><th>Tool Name</th><th>Core Computational Capability</th><th>Pricing Model</th></tr></thead>
             <tbody>
-                <tr style="background-color: rgba(234,179,8,0.2)"><td><b>GitHub Copilot</b></td><td>Autocompletes code blocks in real-time</td><td>Paid Tier</td></tr>
-                <tr style="background-color: rgba(22,163,74,0.2)"><td><b>IBM Watson</b></td><td>Enterprise cloud architecture code logic</td><td>Paid Tier</td></tr>
+                <tr style="background-color: rgba(250,204,21,0.2)"><td><b>GitHub Copilot</b></td><td>Autocompletes code blocks in real-time within the IDE code workspace.</td><td>Paid Tier</td></tr>
+                <tr style="background-color: rgba(74,222,128,0.2)"><td><b>IBM Watson</b></td><td>Enterprise cloud architecture code generation and refactoring logic.</td><td>Paid Tier</td></tr>
             </tbody>
         </table>
     </div>
@@ -100,28 +100,41 @@
 
 <script>
     function switchTab(panelId) {
+        // Hide all content panels
         document.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
+        // Remove active class from all buttons
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        
+        // Show selected panel
         document.getElementById(panelId).classList.add('active');
-        event.currentTarget.classList.add('active');
+        // Make clicked button look active
+        document.getElementById('btn-' + panelId).classList.add('active');
     }
 
-    const ctx = document.getElementById('movingChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['2022 Foundations', '2024 Expansion', '2026 Multimodal (Now)', '2028 Projections'],
-            datasets: [{
-                label: 'AI Tool Adoption & Efficiency Rate (%)',
-                data:,
-                borderColor: '#3b82f6',
-                backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                fill: true,
-                tension: 0.4
-            }]
-        },
-        options: { responsive: true, maintainAspectRatio: false }
-    });
+    window.onload = function() {
+        const ctx = document.getElementById('movingChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2022 Foundations', '2024 Expansion', '2026 Multimodal (Now)', '2028 Projections'],
+                datasets: [{
+                    label: 'AI Tool Adoption & Efficiency Rate (%)',
+                    data:,
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, max: 100 }
+                }
+            }
+        });
+    }
 </script>
 </body>
 </html>
